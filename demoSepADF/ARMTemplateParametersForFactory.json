@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "demoSepADF"
+		},
+		"ls_azsqldb_connectionString": {
+			"value": ""
+		},
+		"ls_blobstrg_connectionString": {
+			"value": ""
+		},
+		"ls_dataLake_accountKey": {
+			"value": ""
+		},
+		"ls_azKeyVault_properties_typeProperties_baseUrl": {
+			"value": "https://azdemosepKeyVault.vault.azure.net/"
+		},
+		"ls_dataLake_properties_typeProperties_url": {
+			"value": "https://azdemoadls2.dfs.core.windows.net/"
+		},
+		"ls_dataLake_managedIdentity_properties_typeProperties_url": {
+			"value": "https://azdemoadls2.dfs.core.windows.net/"
+		},
+		"ls_http_git_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/djpmsft/adf-ready-demo/master/moviesDB.csv"
+		},
+		"ls_http_rebricks_properties_typeProperties_url": {
+			"value": "https://cdn.rebrickable.com/media/downloads/"
+		}
+	}
+}
