@@ -1,0 +1,26 @@
+{
+	"name": "dyn_ds_blob",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blobstrg",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "dyn_pipeline"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "client1"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

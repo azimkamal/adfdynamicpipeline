@@ -1,0 +1,23 @@
+{
+	"name": "ds_sink_rebricks_theme",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_dataLake",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "general"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "adf-out"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
