@@ -11,7 +11,7 @@
 			}
 		},
 		"folder": {
-			"name": "general"
+			"name": "dyn_pipeline"
 		},
 		"annotations": [],
 		"type": "DelimitedText",

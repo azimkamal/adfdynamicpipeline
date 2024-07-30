@@ -5,19 +5,11 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"dataset": {
-						"referenceName": "ds_sink_adls_fromGitHub",
-						"type": "DatasetReference"
-					},
 					"name": "source1"
 				}
 			],
 			"sinks": [
 				{
-					"dataset": {
-						"referenceName": "ds_dataflow_movie",
-						"type": "DatasetReference"
-					},
 					"name": "sink1",
 					"rejectedDataLinkedService": {
 						"referenceName": "ls_dataLake",
@@ -46,8 +38,7 @@
 				"          {Rotton Tomato} as short",
 				"     ),",
 				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1",
+				"     validateSchema: false) ~> source1",
 				"source1 select(mapColumn(",
 				"          movie,",
 				"          title,",
@@ -61,12 +52,11 @@
 				"filter1 derive(PrimaryGenre = iif(locate('|',genres) >1, left(genres,locate('|',genres)-1),genres)) ~> derivedColumn1",
 				"derivedColumn1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     format: 'parquet',",
-				"     umask: 0022,",
-				"     preCommands: [],",
-				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> sink1"
+				"     skipDuplicateMapOutputs: true,",
+				"     format: 'parquet',",
+				"     preCommands: [],",
+				"     postCommands: []) ~> sink1"
 			]
 		}
 	}
