@@ -1,0 +1,9 @@
+{
+	"name": "adfactory-az",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8469f5f8-76f6-49f3-8fc3-ae67227ef819",
+		"tenantId": "89d0b041-6e75-4af5-9a14-ef364ad5b6ea"
+	}
+}
